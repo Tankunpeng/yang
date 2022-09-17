@@ -18,7 +18,7 @@ describe('spike', () => {
     it('create 1 line grid when row = 1 & col > 1', () => {
         expect(createGrid(1, 2)).toEqual([
             { name: CellName.blank, location: [0, 0]},
-            { name: CellName.blank, location: [0, 8]},
+            { name: CellName.blank, location: [8, 0]},
         ])
     })
 

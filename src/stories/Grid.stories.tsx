@@ -55,7 +55,7 @@ function calcClickPos(e: any, item: any) {
 }
 
 
-export const widthBackground = () => {
+export const WidthBackground = () => {
     const [value, setValue] = useState(0)
     const [cells, setCells] = useState<string[]>([])
 
