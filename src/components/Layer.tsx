@@ -2,11 +2,12 @@ import {CellView} from "./CellView";
 import {Cell, Location} from "../cellName";
 
 
-export function Layer({data}: { data: Cell[] }) {
 
+
+export function Layer({data, handleClick = () => null}: { data: Cell[], handleClick?: any }) {
     return <div>
         {data.map(item => {
-            return <PositionedCell cell={item}/>
+            return <div onClick={(event) => handleClick(event, item)}><PositionedCell cell={item} /></div>
         })}
     </div>
 }
