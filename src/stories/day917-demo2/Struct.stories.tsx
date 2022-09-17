@@ -5,6 +5,8 @@ import React from "react";
 
 import {ComponentMeta} from '@storybook/react';
 import {CellView} from "../../components/CellView";
+import {currentImg} from "./currentImg";
+import {RawImg} from "./RawImg";
 
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -19,6 +21,26 @@ export default {
 
 
 export const layer1 = () => {
+    const test: Cell[] = [
+        { name: CellName.blank, location: [20,4], },
+        { name: CellName.blank, location: [28,4], },
+        { name: CellName.blank, location: [4,12], },
+        { name: CellName.blank, location: [16,12], },
+        { name: CellName.blank, location: [24,12], },
+        { name: CellName.blank, location: [32,12], },
+        { name: CellName.blank, location: [44,12], },
+    ]
+    return <><div style={{position: 'relative'}}>
+        <WidthBackground></WidthBackground>
+        {/*<div style={{ marginLeft: '40px', position: 'absolute', top: '0', left: '282px'}}><Grid offset={0}/></div>*/}
+        <div style={{ marginLeft: '40px', position: 'absolute', top: '2px', left: '304px'}}><Layer data={test}/></div>
+        <RawImg url={currentImg}/>
+    </div>
+    </>
+}
+
+
+export const layer2 = () => {
     const test: Cell[] = [
         { name: CellName.blank, location: [20,4], },
         { name: CellName.blank, location: [28,4], },
@@ -45,6 +67,9 @@ export const layer1 = () => {
         <WidthBackground></WidthBackground>
         {/*<div style={{ marginLeft: '40px', position: 'absolute', top: '0', left: '282px'}}><Grid offset={0}/></div>*/}
         <div style={{ marginLeft: '40px', position: 'absolute', top: '2px', left: '304px'}}><Layer data={test}/></div>
+
+        <RawImg url={currentImg}/>
     </div>
     </>
 }
+

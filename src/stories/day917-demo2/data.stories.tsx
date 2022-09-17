@@ -6,6 +6,8 @@ import React from "react";
 
 import {ComponentMeta} from '@storybook/react';
 import {CellView} from "../../components/CellView";
+import {currentImg} from "./currentImg";
+import {RawImg} from "./RawImg";
 
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -46,6 +48,7 @@ export const face = () => {
         <WidthBackground></WidthBackground>
         <div style={{ marginLeft: '40px', position: 'absolute', top: '0', left: '282px'}}><Grid offset={0}/></div>
         <div style={{ marginLeft: '40px', position: 'absolute', top: '2px', left: '304px'}}><Layer data={test}/></div>
+        <RawImg url={currentImg}/>
     </div>
     </>
 }
