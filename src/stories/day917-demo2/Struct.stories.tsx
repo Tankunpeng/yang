@@ -96,23 +96,23 @@ export const layer4 = () => {
 export const layer5 = () => {
     const test: Cell[] = [
         { name: CellName.blank, location: [12,8], },
+        { name: CellName.blank, location: [36,8], },
+        { name: CellName.blank, location: [4,12], },
+        { name: CellName.blank, location: [44,12], },
         { name: CellName.blank, location: [12,16], },
+        { name: CellName.blank, location: [36,16], },
+        { name: CellName.blank, location: [4,20], },
+        { name: CellName.blank, location: [44,20], },
         { name: CellName.blank, location: [12,24], },
+        { name: CellName.blank, location: [36,24], },
+        { name: CellName.blank, location: [4,28], },
+        { name: CellName.blank, location: [44,28], },
         { name: CellName.blank, location: [12,32], },
+        { name: CellName.blank, location: [36,32], },
         { name: CellName.blank, location: [12,40], },
         { name: CellName.blank, location: [20,40], },
         { name: CellName.blank, location: [28,40], },
         { name: CellName.blank, location: [36,40], },
-        { name: CellName.blank, location: [36,32], },
-        { name: CellName.blank, location: [36,24], },
-        { name: CellName.blank, location: [36,16], },
-        { name: CellName.blank, location: [36,8], },
-        { name: CellName.blank, location: [4,12], },
-{ name: CellName.blank, location: [4,20], },
-{ name: CellName.blank, location: [4,28], },
-{ name: CellName.blank, location: [44,12], },
-{ name: CellName.blank, location: [44,20], },
-{ name: CellName.blank, location: [44,28], },
     ]
     return <><div style={{position: 'relative'}}>
         <WidthBackground></WidthBackground>
