@@ -1,32 +1,33 @@
-import { describe, it, expect } from "vitest";
+import {describe, expect, it} from "vitest";
 import {Cell, CellName} from "../src/cellName";
+import {countCell, getFaceCells, hasResolution, missCell} from "../src/model/resolution";
 
 
 export const face1: Cell[] = [
-    { name: CellName.sheep, location: [20,4], },
-    { name: CellName.wood, location: [28,4], },
-    { name: CellName.bucket, location: [4,12], },
-    { name: CellName.cabbage, location: [16,12], },
-    { name: CellName.brush, location: [24,12], },
-    { name: CellName.wool, location: [32,12], },
-    { name: CellName.wool, location: [44,12], },
-    { name: CellName.fork, location: [4,20], },
-    { name: CellName.glove, location: [24,20], },
-    { name: CellName.cabbage, location: [44,20], },
-    { name: CellName.fork, location: [4,28], },
-    { name: CellName.scissor, location: [12,24], },
-    { name: CellName.wood, location: [36,24], },
-    { name: CellName.carrot, location: [44,28], },
-    { name: CellName.grass, location: [20,40], },
-    { name: CellName.cabbage, location: [28,40], },
-    { name: CellName.milk, location: [0,44], },
-    { name: CellName.cabbage, location: [48,44], },
-    { name: CellName.glove, location: [16,56], },
-    { name: CellName.grass, location: [32,56], },
+    {name: CellName.sheep, location: [20, 4],},
+    {name: CellName.wood, location: [28, 4],},
+    {name: CellName.bucket, location: [4, 12],},
+    {name: CellName.cabbage, location: [16, 12],},
+    {name: CellName.brush, location: [24, 12],},
+    {name: CellName.wool, location: [32, 12],},
+    {name: CellName.wool, location: [44, 12],},
+    {name: CellName.fork, location: [4, 20],},
+    {name: CellName.glove, location: [24, 20],},
+    {name: CellName.cabbage, location: [44, 20],},
+    {name: CellName.fork, location: [4, 28],},
+    {name: CellName.scissor, location: [12, 24],},
+    {name: CellName.wood, location: [36, 24],},
+    {name: CellName.carrot, location: [44, 28],},
+    {name: CellName.grass, location: [20, 40],},
+    {name: CellName.cabbage, location: [28, 40],},
+    {name: CellName.milk, location: [0, 44],},
+    {name: CellName.cabbage, location: [48, 44],},
+    {name: CellName.glove, location: [16, 56],},
+    {name: CellName.grass, location: [32, 56],},
 ]
 
-describe('find possible result', () => {
-    it('should calc weather has resolution', () => {
+describe('find one layer possible result', () => {
+    it('should calc whether has resolution', () => {
         expect(hasResolution(face1)).toBe(true)
     })
 
@@ -53,25 +54,36 @@ describe('find possible result', () => {
     })
 
     it('should get miss cells', () => {
-        console.log([...missCell(face1)])
-        expect(missCell(face1)).toEqual([ 'corn', 'wheat', 'fire', 'bell', 'blank' ])
+        expect([...missCell(face1)]).toEqual(['corn', 'wheat', 'fire', 'bell'])
     })
 })
 
-function hasResolution(faceLayer: Cell[]) {
-    const count = countCell(face1)
-    return !![...count].filter(([name, count]) => count > 2).length
-}
+describe('find multi layer possible result', () => {
 
-function missCell(faceLayer: Cell[]) {
-    const count = countCell(face1)
-    return new Set([...count].filter(([name, count]) => count === 0).map(([name]) => name))
-}
+    it('should get blank face cells count', () => {
+        expect(getFaceCells([])).toEqual([])
+    })
 
-function countCell(cells: Cell[]) {
-    const cellMap = new Map(Object.values(CellName).map(key => [key, 0]))
-    cells.forEach(cell => cellMap.set(cell.name, (cellMap.get(cell.name) || 0 ) + 1))
-    return cellMap
-}
+    it('should get one face cells count', () => {
+        expect(getFaceCells([[{name: CellName.sheep, location: [0, 0],}]])).toEqual([{
+            name: CellName.sheep,
+            location: [0, 0],
+        },])
+        expect(getFaceCells([[
+            {name: CellName.blank, location: [4, 12],},
+        ], [
+            {name: CellName.blank, location: [20, 4],},
+            {name: CellName.bucket, location: [4, 12],},
+        ], [
+            {name: CellName.sheep, location: [20, 4],},
+            {name: CellName.blank, location: [28, 4],},
+            {name: CellName.bucket, location: [4, 12],},
+        ]],)).toEqual([
+            {name: CellName.blank, location: [4, 12],},
+            {name: CellName.blank, location: [20, 4],},
+            {name: CellName.blank, location: [28, 4],},
+        ])
+    })
+})
 
 
