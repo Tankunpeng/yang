@@ -9,7 +9,7 @@ const grid: Cell[] = [
     {name: CellName.blank, location: [8, 0]}
 ]
 
-export function Grid({offset = 0, handleClick = () => null}: { offset: number, handleClick: any }) {
+export function Grid({offset = 0, handleClick = () => null}: { offset: number, handleClick?: any }) {
     const rows = offset % 8 > 0 ? 7 : 8
     const cols = offset % 8 > 0 ? 6 : 7
     return <div style={{ width: '320px', height: '320px', border: '2px solid', position: 'relative', }}>
