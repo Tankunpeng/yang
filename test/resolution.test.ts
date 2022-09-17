@@ -51,11 +51,21 @@ describe('find possible result', () => {
             blank: 0
         })
     })
+
+    it('should get miss cells', () => {
+        console.log([...missCell(face1)])
+        expect(missCell(face1)).toEqual([ 'corn', 'wheat', 'fire', 'bell', 'blank' ])
+    })
 })
 
 function hasResolution(faceLayer: Cell[]) {
     const count = countCell(face1)
     return !![...count].filter(([name, count]) => count > 2).length
+}
+
+function missCell(faceLayer: Cell[]) {
+    const count = countCell(face1)
+    return new Set([...count].filter(([name, count]) => count === 0).map(([name]) => name))
 }
 
 function countCell(cells: Cell[]) {

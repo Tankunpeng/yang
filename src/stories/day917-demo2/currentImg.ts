@@ -1,0 +1,1 @@
+export const currentImg = './demo2/IMG_8413.PNG'
