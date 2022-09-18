@@ -162,7 +162,12 @@ export const layer8 = () => {
 export const layer9 = () => {
     const test: Cell[] = [
         { name: CellName.blank, location: [0,32], },
-{ name: CellName.blank, location: [48,32], },
+        { name: CellName.blank, location: [8,32], },
+        { name: CellName.blank, location: [16,32], },
+        { name: CellName.blank, location: [24,32], },
+        { name: CellName.blank, location: [32,32], },
+        { name: CellName.blank, location: [40,32], },
+        { name: CellName.blank, location: [48,32], },
     ]
     return <><div style={{position: 'relative'}}>
         <WidthBackground></WidthBackground>
