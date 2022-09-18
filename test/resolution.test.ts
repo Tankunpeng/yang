@@ -21,6 +21,7 @@ import {
     struct8,
     struct9
 } from "../src/model/day918/struct";
+import {changeName, getInitStruct, getItem} from "../src/model/fillStruct";
 
 
 export const face1: Cell[] = [
@@ -150,30 +151,5 @@ describe('card input', () => {
         expect(getItem(changed, '1-3')!.name).toEqual(CellName.corn)
     })
 })
-
-function getInitStruct(id: string) {
-    return import(`./../src/model/${id}/struct.ts`).then(data => {
-        return data.struct
-    })
-}
-
-function changeName(cells: (Cell | Cell[])[], request: { id: string, name: CellName }) {
-    const change = (item: Cell) => {
-        return request.id === item.id ? {
-            ...item,
-            name: request.name
-        } : item
-    }
-    return cells.map(cell => {
-        if (Array.isArray(cell)) {
-            return cell.map(change)
-        }
-        return change(cell)
-    })
-}
-
-function getItem(cells: (Cell | Cell[])[], id: string): Cell | null {
-    return cells.flat().find(cell => cell.id === id) || null
-}
 
 
