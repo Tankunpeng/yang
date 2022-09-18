@@ -92,7 +92,8 @@ export const layer4 = () => {
 }
 export const layer5 = () => {
     const test: Cell[] = [
-       
+        { name: CellName.blank, location: [0,20], },
+        { name: CellName.blank, location: [48,20], },
     ]
     return <><div style={{position: 'relative'}}>
         <WidthBackground></WidthBackground>

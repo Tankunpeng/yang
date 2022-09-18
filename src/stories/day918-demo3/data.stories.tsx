@@ -86,10 +86,12 @@ export const layer4 = () => {
     </div>
     </>
 }
-// 有错误
+
+
 export const layer5 = () => {
     const test: Cell[] = [
-      
+        { name: CellName.corn, location: [0,20], },
+        { name: CellName.scissor, location: [48,20], },
     ]
     return <><div style={{position: 'relative'}}>
         <WidthBackground></WidthBackground>
