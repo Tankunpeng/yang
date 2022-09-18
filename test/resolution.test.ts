@@ -1,7 +1,26 @@
-import {describe, expect, it} from "vitest";
+import {beforeEach, describe, expect, it} from "vitest";
 import {Cell, CellName} from "../src/cellName";
 import {countCell, faceCellIdsSet, genId, getFaceCells, hasResolution, missCell} from "../src/model/resolution";
 import {data} from "../src/model/day918/data1";
+import {
+    struct1,
+    struct10,
+    struct11,
+    struct12,
+    struct13,
+    struct14,
+    struct15,
+    struct16,
+    struct17,
+    struct2,
+    struct3,
+    struct4,
+    struct5,
+    struct6,
+    struct7,
+    struct8,
+    struct9
+} from "../src/model/day918/struct";
 
 
 export const face1: Cell[] = [
@@ -100,5 +119,61 @@ describe('find multi layer possible result', () => {
         ])
     })
 })
+
+describe('card input', () => {
+    let struct: Cell[][];
+    beforeEach(async () => {
+        struct = await getInitStruct('day918')
+    })
+
+    it('should get blank struct data by struct id when init', () => {
+        expect(struct).toEqual([
+            struct1, struct2, struct3, struct4, struct5,
+            struct6, struct7, struct8, struct9, struct10,
+            struct11, struct12, struct13, struct14, struct15,
+            struct16, struct17,
+        ])
+    })
+
+    it('should change cell name', () => {
+        const layer1 = struct[0]
+        expect(getItem(layer1, '1-3')!.name).toEqual(CellName.blank)
+        const changed = changeName(layer1, {id: '1-3', name: CellName.corn})
+        expect(getItem(layer1, '1-3')!.name).toEqual(CellName.blank)
+        expect(getItem(changed, '1-3')!.name).toEqual(CellName.corn)
+    })
+
+    it('should change layers cell name', () => {
+        expect(getItem(struct, '1-3')!.name).toEqual(CellName.blank)
+        const changed = changeName(struct, {id: '1-3', name: CellName.corn})
+        expect(getItem(struct, '1-3')!.name).toEqual(CellName.blank)
+        expect(getItem(changed, '1-3')!.name).toEqual(CellName.corn)
+    })
+})
+
+function getInitStruct(id: string) {
+    return import(`./../src/model/${id}/struct.ts`).then(data => {
+        return data.struct
+    })
+}
+
+function changeName(cells: (Cell | Cell[])[], request: { id: string, name: CellName }) {
+    const change = (item: Cell) => {
+        return request.id === item.id ? {
+            ...item,
+            name: request.name
+        } : item
+    }
+    return cells.map(cell => {
+        if (Array.isArray(cell)) {
+            return cell.map(change)
+        }
+        return change(cell)
+    })
+}
+
+function getItem(cells: (Cell | Cell[])[], id: string): Cell | null {
+    return cells.flat().find(cell => cell.id === id) || null
+}
 
 

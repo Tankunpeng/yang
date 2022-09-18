@@ -279,3 +279,11 @@ export const struct17: Cell[] = [
 export const struct18: Cell[] = []
 export const struct19: Cell[] = []
 export const struct20: Cell[] = []
+
+
+export const struct = [
+    struct1, struct2, struct3, struct4, struct5,
+    struct6, struct7, struct8, struct9, struct10,
+    struct11, struct12, struct13, struct14, struct15,
+    struct16, struct17,
+]
