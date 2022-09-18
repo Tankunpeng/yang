@@ -205,6 +205,11 @@ export const layer11 = () => {
         { name: CellName.milk, location: [24,16], },
         { name: CellName.bucket, location: [32,16], },
         { name: CellName.wood, location: [40,16], },
+        { name: CellName.fire, location: [8,24], },
+        { name: CellName.grass, location: [16,24], },
+        { name: CellName.bell, location: [24,24], },
+        { name: CellName.grass, location: [32,24], },
+        { name: CellName.fork, location: [40,24], },
     ]
     return <><div style={{position: 'relative'}}>
         <WidthBackground></WidthBackground>

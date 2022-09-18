@@ -204,10 +204,15 @@ export const layer10 = () => {
 export const layer11 = () => {
     const test: Cell[] = [
         { name: CellName.blank, location: [8,16], },
-{ name: CellName.blank, location: [16,16], },
-{ name: CellName.blank, location: [24,16], },
-{ name: CellName.blank, location: [32,16], },
-{ name: CellName.blank, location: [40,16], },
+        { name: CellName.blank, location: [16,16], },
+        { name: CellName.blank, location: [24,16], },
+        { name: CellName.blank, location: [32,16], },
+        { name: CellName.blank, location: [40,16], },
+        { name: CellName.blank, location: [8,24], },
+        { name: CellName.blank, location: [16,24], },
+        { name: CellName.blank, location: [24,24], },
+        { name: CellName.blank, location: [32,24], },
+        { name: CellName.blank, location: [40,24], },
     ]
     return <><div style={{position: 'relative'}}>
         <WidthBackground></WidthBackground>
