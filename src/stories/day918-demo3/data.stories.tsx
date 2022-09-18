@@ -229,6 +229,18 @@ export const layer12 = () => {
         { name: CellName.scissor, location: [28,0], },
         { name: CellName.carrot, location: [36,0], },
         { name: CellName.sheep, location: [44,0], },
+        { name: CellName.milk, location: [4,16], },
+        { name: CellName.bell, location: [12,16], },
+        { name: CellName.fire, location: [20,16], },
+        { name: CellName.wood, location: [28,16], },
+        { name: CellName.sheep, location: [36,16], },
+        { name: CellName.glove, location: [44,16], },
+        { name: CellName.sheep, location: [4,24], },
+        { name: CellName.wood, location: [12,24], },
+        { name: CellName.bucket, location: [20,24], },
+        { name: CellName.wool, location: [28,24], },
+        { name: CellName.wool, location: [36,24], },
+        { name: CellName.grass, location: [44,24], },
     ]
     return <><div style={{position: 'relative'}}>
         <WidthBackground></WidthBackground>
