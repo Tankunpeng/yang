@@ -1,11 +1,11 @@
 import {Cell} from "../cellName";
 import {Layer, LayerWrap} from "./Layer";
-import {getFaceCells} from "../model/resolution";
 import {useEffect, useState} from "react";
+import {faceCellIdsSet} from "../model/resolution";
 
 export function Play({struct, data}: { struct: Cell[][], data: Cell[][] }) {
 
-    const [lastData, setLastData] = useState(genId(data))
+    const [lastData, setLastData] = useState(data)
     const [faceCells, setFaceCells] = useState(faceCellIdsSet(lastData))
 
     function handleClick(event: any, item: Cell) {
@@ -33,17 +33,6 @@ export function Play({struct, data}: { struct: Cell[][], data: Cell[][] }) {
             ></Layer>)}
         </LayerWrap>
     </div>
-}
-
-const genId = (data: Cell[][]) => {
-    return data.map((layer, stackIndex) => layer.map((cell, index) => {
-        cell.id = cell.id || `${stackIndex + 1}-${index + 1}`
-        return cell
-    }))
-}
-
-function faceCellIdsSet(cells: Cell[][]) {
-    return new Set(getFaceCells(cells).map(item => item.id))
 }
 
 

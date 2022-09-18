@@ -20,6 +20,7 @@ import {
 import {data} from "../model/day918/data1";
 import {currentImg} from "./day918-demo3/currentImg";
 import {RawImg} from "./day918-demo3/RawImg";
+import {genId} from "../model/resolution";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -39,7 +40,7 @@ export const base = () => {
         struct6, struct7, struct8, struct9, struct10,
         struct11, struct12, struct13, struct14, struct15,
         struct16, struct17,
-    ]} data={data}/>
+    ]} data={genId(data)}/>
     <div style={{ position: 'relative', left: '-320px'}}>
         <RawImg url={currentImg}/>
     </div>

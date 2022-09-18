@@ -1,6 +1,7 @@
 import {describe, expect, it} from "vitest";
 import {Cell, CellName} from "../src/cellName";
-import {countCell, getFaceCells, hasResolution, missCell} from "../src/model/resolution";
+import {countCell, faceCellIdsSet, genId, getFaceCells, hasResolution, missCell} from "../src/model/resolution";
+import {data} from "../src/model/day918/data1";
 
 
 export const face1: Cell[] = [
@@ -82,6 +83,20 @@ describe('find multi layer possible result', () => {
             {name: CellName.blank, location: [4, 12],},
             {name: CellName.blank, location: [20, 4],},
             {name: CellName.blank, location: [28, 4],},
+        ])
+    })
+
+    it('should get right face cells set', () => {
+        console.log([...faceCellIdsSet(genId(data))])
+        expect([...faceCellIdsSet(genId(data))]).toEqual([
+            '1-1', '1-2', '1-3', '1-4',
+            '3-3', '3-4',
+            '4-2', '4-3', '4-4', '4-5',
+            '6-2', '6-3', '6-4', '6-5',
+            // '8-2', '8-3', '8-4', '8-5', '8-6', // error
+            '10-1', '10-2',
+            '11-3',
+            '12-2', '12-3', '12-4', '12-5'
         ])
     })
 })

@@ -51,3 +51,14 @@ export function getFaceCells(layers: Cell[][]) {
     }
     return result
 }
+
+export function faceCellIdsSet(cells: Cell[][]) {
+    return new Set(getFaceCells(cells).map(item => item.id))
+}
+
+export const genId = (data: Cell[][]) => {
+    return data.map((layer, stackIndex) => layer.map((cell, index) => {
+        cell.id = cell.id || `${stackIndex + 1}-${index + 1}`
+        return cell
+    }))
+}
