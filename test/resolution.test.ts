@@ -86,7 +86,7 @@ describe('find multi layer possible result', () => {
         ])
     })
 
-    it('should get right face cells set', () => {
+    it('should conflict item range also be mark visited when the conflict item cover some new item', () => {
         console.log([...faceCellIdsSet(genId(data))])
         expect([...faceCellIdsSet(genId(data))]).toEqual([
             '1-1', '1-2', '1-3', '1-4',

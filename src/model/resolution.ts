@@ -26,7 +26,11 @@ export function getFaceCells(layers: Cell[][]) {
     const cols = 7
     const faceCells = Array( rows * slice * cols * slice ).fill(false)
     const result = []
+
+
+    let index= 0
     for(let layer of layers) {
+        index++
         for(let cell of layer) {
             const [x0, y0] = cell.location
             let conflict = false
@@ -35,13 +39,9 @@ export function getFaceCells(layers: Cell[][]) {
                     const index = ((y0 + y) * cols * slice) + (x0 + x)
                     if(faceCells[index]) {
                         conflict = true
-                        break
                     }
 
                     faceCells[index] = true
-                }
-                if(conflict) {
-                    break
                 }
             }
             if (!conflict) {

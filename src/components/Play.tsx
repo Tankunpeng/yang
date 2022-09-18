@@ -13,8 +13,8 @@ export function Play({struct, data}: { struct: Cell[][], data: Cell[][] }) {
         if(faceCells.has(item.id)) {
             const currentData = removeItem(lastData, item)
             setLastData(currentData)
-            setFaceCells(faceCellIdsSet(lastData))
-            console.log(faceCellIdsSet(lastData))
+            setFaceCells(faceCellIdsSet(currentData))
+            console.log(faceCellIdsSet(currentData))
         }
     }
 
@@ -24,7 +24,7 @@ export function Play({struct, data}: { struct: Cell[][], data: Cell[][] }) {
 
     return <div>
         <LayerWrap>
-            {lastData.reverse().map((layer, i) => <Layer
+            {[...lastData].reverse().map((layer, i) => <Layer
                 data={layer}
                 key={JSON.stringify(layer)}
                 stack={lastData.length - i}
