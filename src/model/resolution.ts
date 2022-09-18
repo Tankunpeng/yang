@@ -99,3 +99,17 @@ export function addToHome(cells: Cell[], item: Cell) {
     cells.push(item)
     return cells
 }
+
+
+
+/** 保存数据 */
+export function cacheData(id: string, cells: Cell[][]) {
+    const cachedData = JSON.parse(localStorage.getItem('demo-data') || '{}')
+    cachedData[id] = cells
+    window.localStorage.setItem('demo-data', JSON.stringify(cachedData))
+}
+
+export function getCacheData(id: string) {
+    const cached = JSON.parse(window.localStorage.getItem('demo-data') || 'null')
+    return cached ? cached[id] : null
+}

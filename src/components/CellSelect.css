@@ -1,0 +1,24 @@
+.cell-select__options {
+    display: flex;
+    flex-wrap: wrap;
+    width: 270px;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.cell-select__item {
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+.cell-select__current {
+    border-color: #777;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px #ccc;
+}
+
+.cell-select__item:hover {
+    border-color: #f00;
+}
+
+

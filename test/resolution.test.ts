@@ -1,6 +1,14 @@
 import {beforeEach, describe, expect, it} from "vitest";
 import {Cell, CellName} from "../src/cellName";
-import {countCell, faceCellIdsSet, genId, getFaceCells, hasResolution, missCell} from "../src/model/resolution";
+import {
+    cacheData,
+    countCell,
+    faceCellIdsSet,
+    genId, getCacheData,
+    getFaceCells,
+    hasResolution,
+    missCell
+} from "../src/model/resolution";
 import {data} from "../src/model/day918/data1";
 import {
     struct1,
@@ -150,6 +158,16 @@ describe('card input', () => {
         expect(getItem(struct, '1-3')!.name).toEqual(CellName.blank)
         expect(getItem(changed, '1-3')!.name).toEqual(CellName.corn)
     })
+
+    it.skip('should save change data', () => {
+        // todo test localstorage
+        cacheData('tttttttt', [[]])
+        expect(getCacheData('tttttttt')).toEqual([[]])
+    })
 })
 
+// todo 高效建模
+// todo 最快多少层能揭开
+// todo 计算包含 home 区域
+// todo 多层策略
 

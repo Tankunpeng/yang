@@ -1,18 +1,32 @@
 import {Cell} from "../cellName";
 import {Layer, LayerWrap} from "./Layer";
 import {useEffect, useState} from "react";
-import {addToHome, countCell, faceCellIdsSet, getFaceCells, hasResolution, missCell} from "../model/resolution";
+import {
+    addToHome, cacheData,
+    countCell,
+    faceCellIdsSet,
+    getCacheData,
+    getFaceCells,
+    hasResolution,
+    missCell
+} from "../model/resolution";
 import './Play.css'
 import {CellView} from "./CellView";
 
-export function Play({struct, data}: { struct: Cell[][], data: Cell[][] }) {
+export function Play({struct, data, onPlay, cacheKey, used }: { used: Cell[], cacheKey: string, struct: Cell[][], data: Cell[][], onPlay?: (item: Cell) => void }) {
 
-    const [lastData, setLastData] = useState(data)
+    const [lastData, setLastData] = useState([...data])
     const [faceCells, setFaceCells] = useState(faceCellIdsSet(lastData))
 
-    const [record, setRecord] = useState<Cell[]>([])
+    useEffect(() => {
+        const filted = used.reduce((result, item) => removeItem(result, item), data)
+        setLastData(filted)
+        setFaceCells(faceCellIdsSet(filted))
+    }, [data])
 
-    const [home, setHome] = useState<Cell[]>([])
+    const [record, setRecord] = useState<Cell[]>(getCacheData(`${cacheKey}-record`) || [])
+    const [home, setHome] = useState<Cell[]>(getCacheData(`${cacheKey}-home`) || [])
+
 
 
     function handleClick(event: any, item: Cell) {
@@ -24,6 +38,11 @@ export function Play({struct, data}: { struct: Cell[][], data: Cell[][] }) {
             console.log(faceCellIdsSet(currentData))
             setRecord([...record, item])
             setHome(addToHome(home, item))
+            cacheData(`${cacheKey}-record`, [...record, item])
+            cacheData(`${cacheKey}-home`, addToHome(home, item))
+
+
+            onPlay && onPlay(item)
         }
     }
 
@@ -53,7 +72,7 @@ export function Play({struct, data}: { struct: Cell[][], data: Cell[][] }) {
 }
 
 
-function removeItem(cells: Cell[][], item: Cell) {
+export function removeItem(cells: Cell[][], item: Cell) {
     const result = []
     for(let layer of cells) {
         const current = []
