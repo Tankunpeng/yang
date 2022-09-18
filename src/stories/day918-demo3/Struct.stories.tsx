@@ -381,6 +381,18 @@ export const layer16 = () => {
 
 export const layer17 = () => {
     const test: Cell[] = [
+        { name: CellName.blank, location: [16,4], },
+        { name: CellName.blank, location: [24,4], },
+        { name: CellName.blank, location: [32,4], },
+        { name: CellName.blank, location: [16,12], },
+        { name: CellName.blank, location: [24,12], },
+        { name: CellName.blank, location: [32,12], },
+        { name: CellName.blank, location: [16,20], },
+        { name: CellName.blank, location: [24,20], },
+        { name: CellName.blank, location: [32,20], },
+        { name: CellName.blank, location: [16,28], },
+        { name: CellName.blank, location: [24,28], },
+        { name: CellName.blank, location: [32,28], },
 
     ]
     return <><div style={{position: 'relative'}}>

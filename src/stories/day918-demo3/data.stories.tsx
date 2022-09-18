@@ -372,3 +372,29 @@ export const layer16 = () => {
     </div>
     </>
 }
+
+
+export const layer17 = () => {
+    const test: Cell[] = [
+        { name: CellName.carrot, location: [16,4], },
+        { name: CellName.blank, location: [24,4], },
+        { name: CellName.wool, location: [32,4], },
+        { name: CellName.bell, location: [16,12], },
+        { name: CellName.blank, location: [24,12], },
+        { name: CellName.grass, location: [32,12], },
+        { name: CellName.scissor, location: [16,20], },
+        { name: CellName.grass, location: [24,20], },
+        { name: CellName.corn, location: [32,20], },
+        { name: CellName.blank, location: [16,28], },
+        { name: CellName.carrot, location: [24,28], },
+        { name: CellName.corn, location: [32,28], },
+
+    ]
+    return <><div style={{position: 'relative'}}>
+        <WidthBackground></WidthBackground>
+        <div style={{ marginLeft: '40px', position: 'absolute', top: '0', left: '282px'}}><Grid offset={0}/></div>
+        <div style={{ marginLeft: '40px', position: 'absolute', top: '2px', left: '304px'}}><Layer data={test}/></div>
+        <RawImg url={currentImg}/>
+    </div>
+    </>
+}
