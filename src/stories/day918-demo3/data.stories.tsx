@@ -179,9 +179,14 @@ export const layer9 = () => {
 export const layer10 = () => {
     const test: Cell[] = [
         { name: CellName.fire, location: [12,16], },
-{ name: CellName.scissor, location: [36,16], },
-{ name: CellName.wool, location: [0,28], },
-{ name: CellName.glove, location: [48,28], },
+        { name: CellName.scissor, location: [36,16], },
+        { name: CellName.wool, location: [0,28], },
+        { name: CellName.sheep, location: [8,28], },
+        { name: CellName.fire, location: [16,28], },
+        { name: CellName.milk, location: [24,28], },
+        { name: CellName.glove, location: [32,28], },
+        { name: CellName.glove, location: [40,28], },
+        { name: CellName.glove, location: [48,28], },
     ]
     return <><div style={{position: 'relative'}}>
         <WidthBackground></WidthBackground>
