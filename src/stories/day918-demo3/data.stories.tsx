@@ -344,3 +344,31 @@ export const layer15 = () => {
     </div>
     </>
 }
+
+export const layer16 = () => {
+    const test: Cell[] = [
+        { name: CellName.bell, location: [12,4], },
+        { name: CellName.corn, location: [20,4], },
+        { name: CellName.milk, location: [28,4], },
+        { name: CellName.corn, location: [36,4], },
+        { name: CellName.wood, location: [12,12], },
+        { name: CellName.fire, location: [20,12], },
+        { name: CellName.bucket, location: [28,12], },
+        { name: CellName.wood, location: [36,12], },
+        { name: CellName.carrot, location: [12,20], },
+        { name: CellName.fork, location: [20,20], },
+        { name: CellName.cabbage, location: [28,20], },
+        { name: CellName.cabbage, location: [36,20], },
+        { name: CellName.wool, location: [12,28], },
+        { name: CellName.bucket, location: [20,28], },
+        { name: CellName.fork, location: [28,28], },
+        { name: CellName.carrot, location: [36,28], },
+    ]
+    return <><div style={{position: 'relative'}}>
+        <WidthBackground></WidthBackground>
+        <div style={{ marginLeft: '40px', position: 'absolute', top: '0', left: '282px'}}><Grid offset={0}/></div>
+        <div style={{ marginLeft: '40px', position: 'absolute', top: '2px', left: '304px'}}><Layer data={test}/></div>
+        <RawImg url={currentImg}/>
+    </div>
+    </>
+}
