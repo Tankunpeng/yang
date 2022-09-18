@@ -78,6 +78,8 @@ export const layer4 = () => {
         { name: CellName.blank, location: [28,8], },
         { name: CellName.blank, location: [36,8], },
         { name: CellName.blank, location: [44,8], },
+        { name: CellName.blank, location: [0,16], },
+        { name: CellName.blank, location: [48,16], },
     ]
     return <><div style={{position: 'relative'}}>
         <WidthBackground></WidthBackground>

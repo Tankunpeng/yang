@@ -75,6 +75,8 @@ export const layer4 = () => {
         { name: CellName.sheep, location: [28,8], },
         { name: CellName.milk, location: [36,8], },
         { name: CellName.grass, location: [44,8], },
+        { name: CellName.fork, location: [0,16], },
+        { name: CellName.glove, location: [48,16], },
     ]
     return <><div style={{position: 'relative'}}>
         <WidthBackground></WidthBackground>
