@@ -141,7 +141,7 @@ export const layer8 = () => {
     const test: Cell[] = [
         { name: CellName.bell, location: [4,32], },
         { name: CellName.grass, location: [12,32], },
-        { name: CellName.carrot, location: [20,32], },
+        { name: CellName.corn, location: [20,32], },
         { name: CellName.sheep, location: [28,32], },
         { name: CellName.wool, location: [36,32], },
         { name: CellName.fire, location: [44,32], },
