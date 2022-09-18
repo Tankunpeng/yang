@@ -22,10 +22,10 @@ export default {
 
 export const layer1 = () => {
     const test: Cell[] = [
+        { name: CellName.blank, location: [0,4], },
         { name: CellName.blank, location: [48,4], },
-{ name: CellName.blank, location: [48,12], },
-{ name: CellName.blank, location: [0,4], },
-{ name: CellName.blank, location: [0,12], },
+        { name: CellName.blank, location: [0,12], },
+        { name: CellName.blank, location: [48,12], },
     ]
     return <><div style={{position: 'relative'}}>
         <WidthBackground></WidthBackground>
@@ -229,6 +229,104 @@ export const layer13 = () => {
     const test: Cell[] = [
         { name: CellName.blank, location: [0,0], },
         { name: CellName.blank, location: [48,0], },
+    ]
+    return <><div style={{position: 'relative'}}>
+        <WidthBackground></WidthBackground>
+        {/*<div style={{ marginLeft: '40px', position: 'absolute', top: '0', left: '282px'}}><Grid offset={0}/></div>*/}
+        <div style={{ marginLeft: '40px', position: 'absolute', top: '2px', left: '304px'}}><Layer data={test}/></div>
+
+        <RawImg url={currentImg}/>
+    </div>
+    </>
+}
+
+export const layer14 = () => {
+    const test: Cell[] = [
+
+    ]
+    return <><div style={{position: 'relative'}}>
+        <WidthBackground></WidthBackground>
+        {/*<div style={{ marginLeft: '40px', position: 'absolute', top: '0', left: '282px'}}><Grid offset={0}/></div>*/}
+        <div style={{ marginLeft: '40px', position: 'absolute', top: '2px', left: '304px'}}><Layer data={test}/></div>
+
+        <RawImg url={currentImg}/>
+    </div>
+    </>
+}
+
+export const layer15 = () => {
+    const test: Cell[] = [
+
+    ]
+    return <><div style={{position: 'relative'}}>
+        <WidthBackground></WidthBackground>
+        {/*<div style={{ marginLeft: '40px', position: 'absolute', top: '0', left: '282px'}}><Grid offset={0}/></div>*/}
+        <div style={{ marginLeft: '40px', position: 'absolute', top: '2px', left: '304px'}}><Layer data={test}/></div>
+
+        <RawImg url={currentImg}/>
+    </div>
+    </>
+}
+
+export const layer16 = () => {
+    const test: Cell[] = [
+
+    ]
+    return <><div style={{position: 'relative'}}>
+        <WidthBackground></WidthBackground>
+        {/*<div style={{ marginLeft: '40px', position: 'absolute', top: '0', left: '282px'}}><Grid offset={0}/></div>*/}
+        <div style={{ marginLeft: '40px', position: 'absolute', top: '2px', left: '304px'}}><Layer data={test}/></div>
+
+        <RawImg url={currentImg}/>
+    </div>
+    </>
+}
+
+export const layer17 = () => {
+    const test: Cell[] = [
+
+    ]
+    return <><div style={{position: 'relative'}}>
+        <WidthBackground></WidthBackground>
+        {/*<div style={{ marginLeft: '40px', position: 'absolute', top: '0', left: '282px'}}><Grid offset={0}/></div>*/}
+        <div style={{ marginLeft: '40px', position: 'absolute', top: '2px', left: '304px'}}><Layer data={test}/></div>
+
+        <RawImg url={currentImg}/>
+    </div>
+    </>
+}
+
+export const layer18 = () => {
+    const test: Cell[] = [
+
+    ]
+    return <><div style={{position: 'relative'}}>
+        <WidthBackground></WidthBackground>
+        {/*<div style={{ marginLeft: '40px', position: 'absolute', top: '0', left: '282px'}}><Grid offset={0}/></div>*/}
+        <div style={{ marginLeft: '40px', position: 'absolute', top: '2px', left: '304px'}}><Layer data={test}/></div>
+
+        <RawImg url={currentImg}/>
+    </div>
+    </>
+}
+
+export const layer19 = () => {
+    const test: Cell[] = [
+
+    ]
+    return <><div style={{position: 'relative'}}>
+        <WidthBackground></WidthBackground>
+        {/*<div style={{ marginLeft: '40px', position: 'absolute', top: '0', left: '282px'}}><Grid offset={0}/></div>*/}
+        <div style={{ marginLeft: '40px', position: 'absolute', top: '2px', left: '304px'}}><Layer data={test}/></div>
+
+        <RawImg url={currentImg}/>
+    </div>
+    </>
+}
+
+export const layer20 = () => {
+    const test: Cell[] = [
+
     ]
     return <><div style={{position: 'relative'}}>
         <WidthBackground></WidthBackground>

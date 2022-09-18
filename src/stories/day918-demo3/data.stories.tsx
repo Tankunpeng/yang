@@ -23,10 +23,10 @@ export default {
 
 export const layer1 = () => {
     const test: Cell[] = [
-        { name: CellName.corn, location: [48,4], },
-        { name: CellName.wool, location: [48,12], },
         { name: CellName.bell, location: [0,4], },
+        { name: CellName.corn, location: [48,4], },
         { name: CellName.fork, location: [0,12], },
+        { name: CellName.wool, location: [48,12], },
     ]
     return <><div style={{position: 'relative'}}>
         <WidthBackground></WidthBackground>
