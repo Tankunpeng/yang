@@ -39,13 +39,11 @@ export function getFaceCells(layers: Cell[][]) {
                     }
 
                     faceCells[index] = true
-                    debugger
                 }
                 if(conflict) {
                     break
                 }
             }
-            debugger
             if (!conflict) {
                 result.push(cell)
             }

@@ -26,5 +26,6 @@ export type Location = [x: number, y: number]
 
 export interface Cell {
     name: CellName,
-    location: Location
+    location: Location,
+    id?: string  // 新增标识符
 }

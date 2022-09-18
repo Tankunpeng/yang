@@ -1,5 +1,6 @@
 .cell:hover {
     background: rgba(50,50,50, 0.4);
+    z-index: 2;
 }
 
 .cell:before {
@@ -18,4 +19,25 @@
     border-left: 1px dashed rgba(200,0,0,0.3);
     height: 100%;
     left: 50%;
+}
+
+.cell:hover .cell__id {
+    color: #535bf2;
+    background: rgba(255,255,255, 0.5);
+    opacity: 0.9;
+    font-size: 12px;
+    display: inline-block;
+    z-index: 10;
+}
+.cell__id {
+    /*display: none;*/
+    color: #333;
+    font-weight: bold;
+    position: absolute;
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.cell {
+    position: relative;
 }
