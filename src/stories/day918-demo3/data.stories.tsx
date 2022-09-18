@@ -255,7 +255,29 @@ export const layer12 = () => {
 export const layer13 = () => {
     const test: Cell[] = [
         { name: CellName.bucket, location: [0,0], },
+        { name: CellName.carrot, location: [8,0], },
+        { name: CellName.grass, location: [16,0], },
+        { name: CellName.brush, location: [24,0], },
+        { name: CellName.scissor, location: [32,0], },
+        { name: CellName.bell, location: [40,0], },
         { name: CellName.carrot, location: [48,0], },
+        { name: CellName.milk, location: [0,8], },
+        { name: CellName.milk, location: [8,8], },
+        { name: CellName.scissor, location: [16,8], },
+        { name: CellName.carrot, location: [24,8], },
+        { name: CellName.carrot, location: [32,8], },
+        { name: CellName.milk, location: [40,8], },
+        { name: CellName.brush, location: [48,8], },
+
+        { name: CellName.corn, location: [8,16], },
+        { name: CellName.bucket, location: [40,16], },
+
+        { name: CellName.grass, location: [4,28], },
+        { name: CellName.wood, location: [12,28], },
+        { name: CellName.cabbage, location: [20,28], },
+        { name: CellName.wood, location: [28,28], },
+        { name: CellName.fire, location: [36,28], },
+        { name: CellName.brush, location: [44,28], },
     ]
     return <><div style={{position: 'relative'}}>
         <WidthBackground></WidthBackground>
