@@ -53,8 +53,10 @@ export const layer2 = () => {
 
 export const layer3 = () => {
     const test: Cell[] = [
+        { name: CellName.bell, location: [0,12], },
+        { name: CellName.fire, location: [48,12], },
+        { name: CellName.wool, location: [0,20], },
         { name: CellName.cabbage, location: [48,20], },
-{ name: CellName.wool, location: [0,20], },
     ]
     return <><div style={{position: 'relative'}}>
         <WidthBackground></WidthBackground>
