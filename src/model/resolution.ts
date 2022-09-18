@@ -62,3 +62,17 @@ export const genId = (data: Cell[][]) => {
         return cell
     }))
 }
+
+export function addToHome(cells: Cell[], item: Cell) {
+    cells = [...cells]
+    if (cells.length > 6) {
+        return cells
+    }
+
+    const cellCount = countCell(cells)
+    if(cellCount.get(item.name) === 2) {
+        return cells.filter(cell => cell.name !== item.name)
+    }
+    cells.push(item)
+    return cells
+}

@@ -5,16 +5,33 @@ export const struct1: Cell[] = [
     {name: CellName.blank, location: [48, 4], id:  '1-2'},
     {name: CellName.blank, location: [0, 12], id:  '1-3'},
     {name: CellName.blank, location: [48, 12], id:  '1-4'},
+    // 独立
+    { name: CellName.blank, location: [16,52], id:  '1-5'},
+    { name: CellName.blank, location: [32,52], id:  '1-6'},
+    { name: CellName.blank, location: [4,56], id:  '1-7'},
+    { name: CellName.blank, location: [44,56], id:  '1-8'},
 ]
 export const struct2: Cell[] = [
     {name: CellName.blank, location: [0, 8], id: '2-1'},
     {name: CellName.blank, location: [48, 8], id: '2-2'},
+
+    // 独立
+    { name: CellName.blank, location: [16,51], id:  '1-5'},
+    { name: CellName.blank, location: [32,51], id:  '1-6'},
+    { name: CellName.blank, location: [4,55], id:  '1-7'},
+    { name: CellName.blank, location: [44,55], id:  '1-8'},
 ]
 export const struct3: Cell[] = [
     {name: CellName.blank, location: [0, 12], id: '3-1'},
     {name: CellName.blank, location: [48, 12], id: '3-2'},
     {name: CellName.blank, location: [0, 20], id: '3-3'},
     {name: CellName.blank, location: [48, 20], id: '3-4'},
+
+    // 独立
+    { name: CellName.blank, location: [16,50], id:  '1-5'},
+    { name: CellName.blank, location: [32,50], id:  '1-6'},
+    { name: CellName.blank, location: [4,54], id:  '1-7'},
+    { name: CellName.blank, location: [44,54], id:  '1-8'},
 ]
 export const struct4: Cell[] = [
     {name: CellName.blank, location: [4, 8], id:   '4-1'},
@@ -25,10 +42,22 @@ export const struct4: Cell[] = [
     {name: CellName.blank, location: [44, 8], id:  '4-6'},
     {name: CellName.blank, location: [0, 16], id:  '4-7'},
     {name: CellName.blank, location: [48, 16], id: '4-8'},
+
+    // 独立
+    { name: CellName.blank, location: [16,49], id:  '1-5'},
+    { name: CellName.blank, location: [32,49], id:  '1-6'},
+    { name: CellName.blank, location: [4,53], id:  '1-7'},
+    { name: CellName.blank, location: [44,53], id:  '1-8'},
 ]
 export const struct5: Cell[] = [
     {name: CellName.blank, location: [0, 20], id: '5-1'},
     {name: CellName.blank, location: [48, 20], id: '5-2'},
+
+    // 独立
+    { name: CellName.blank, location: [16,48], id:  '1-5'},
+    { name: CellName.blank, location: [32,48], id:  '1-6'},
+    { name: CellName.blank, location: [4,52], id:  '1-7'},
+    { name: CellName.blank, location: [44,52], id:  '1-8'},
 ]
 export const struct6: Cell[] = [
     {name: CellName.blank, location: [4, 24],  id: '6-1'},
@@ -37,6 +66,10 @@ export const struct6: Cell[] = [
     {name: CellName.blank, location: [28, 24], id: '6-4'},
     {name: CellName.blank, location: [36, 24], id: '6-5'},
     {name: CellName.blank, location: [44, 24], id: '6-6'},
+
+    // 独立
+    { name: CellName.blank, location: [4,51], id:  '1-7'},
+    { name: CellName.blank, location: [44,51], id:  '1-8'},
 ]
 export const struct7: Cell[] = [
     {name: CellName.blank, location: [8, 28], id:  '7-1'},
@@ -44,6 +77,10 @@ export const struct7: Cell[] = [
     {name: CellName.blank, location: [24, 28], id: '7-3'},
     {name: CellName.blank, location: [32, 28], id: '7-4'},
     {name: CellName.blank, location: [40, 28], id: '7-5'},
+
+    // 独立
+    { name: CellName.blank, location: [4,50], id:  '1-7'},
+    { name: CellName.blank, location: [44,50], id:  '1-8'},
 ]
 export const struct8: Cell[] = [
     {name: CellName.blank, location: [4, 32], id:  '8-1'},
@@ -52,6 +89,10 @@ export const struct8: Cell[] = [
     {name: CellName.blank, location: [28, 32], id: '8-4'},
     {name: CellName.blank, location: [36, 32], id: '8-5'},
     {name: CellName.blank, location: [44, 32], id: '8-6'},
+
+    // 独立
+    { name: CellName.blank, location: [4,49], id:  '1-7'},
+    { name: CellName.blank, location: [44,49], id:  '1-8'},
 ]
 export const struct9: Cell[] = [
     {name: CellName.blank, location: [0, 32], id:  '9-1'},
@@ -61,6 +102,11 @@ export const struct9: Cell[] = [
     {name: CellName.blank, location: [32, 32], id: '9-5'},
     {name: CellName.blank, location: [40, 32], id: '9-6'},
     {name: CellName.blank, location: [48, 32], id: '9-7'},
+
+
+    // 独立
+    { name: CellName.blank, location: [4,48], id:  '1-7'},
+    { name: CellName.blank, location: [44,48], id:  '1-8'},
 ]
 export const struct10: Cell[] = [
     {name: CellName.blank, location: [12, 16], id: '10-1'},
@@ -72,6 +118,11 @@ export const struct10: Cell[] = [
     {name: CellName.blank, location: [32, 28], id: '10-7'},
     {name: CellName.blank, location: [40, 28], id: '10-8'},
     {name: CellName.blank, location: [48, 28], id: '10-9'},
+
+
+    // 独立
+    { name: CellName.blank, location: [4,47], id:  '1-7'},
+    { name: CellName.blank, location: [44,47], id:  '1-8'},
 ]
 export const struct11: Cell[] = [
     {name: CellName.blank, location: [8, 16], id:  '11-1'},
@@ -84,6 +135,11 @@ export const struct11: Cell[] = [
     {name: CellName.blank, location: [24, 24], id: '11-8'},
     {name: CellName.blank, location: [32, 24], id: '11-9'},
     {name: CellName.blank, location: [40, 24], id: '11-10'},
+
+
+    // 独立
+    { name: CellName.blank, location: [4,46], id:  '1-7'},
+    { name: CellName.blank, location: [44,46], id:  '1-8'},
 ]
 export const struct12: Cell[] = [
     {name: CellName.blank, location: [4, 0], id:  '12-1'},
@@ -104,6 +160,11 @@ export const struct12: Cell[] = [
     {name: CellName.blank, location: [28, 24],id: '12-16'},
     {name: CellName.blank, location: [36, 24],id: '12-17'},
     {name: CellName.blank, location: [44, 24],id: '12-18'},
+
+
+    // 独立
+    { name: CellName.blank, location: [4,45], id:  '1-7'},
+    { name: CellName.blank, location: [44,45], id:  '1-8'},
 ]
 export const struct13: Cell[] = [
     {name: CellName.blank, location: [0, 0],id:  '13-1'},
@@ -130,6 +191,11 @@ export const struct13: Cell[] = [
     {name: CellName.blank, location: [28, 28],id: '13-20'},
     {name: CellName.blank, location: [36, 28],id: '13-21'},
     {name: CellName.blank, location: [44, 28],id: '13-22'},
+
+
+    // 独立
+    { name: CellName.blank, location: [4,44], id:  '1-7'},
+    { name: CellName.blank, location: [44,44], id:  '1-8'},
 ]
 export const struct14: Cell[] = [
     {name: CellName.blank, location: [4, 8],id:   '14-1'},
@@ -146,6 +212,11 @@ export const struct14: Cell[] = [
     {name: CellName.blank, location: [40, 24],id: '14-12'},
     {name: CellName.blank, location: [8, 32],id:  '14-13'},
     {name: CellName.blank, location: [40, 32],id: '14-14'},
+
+
+    // 独立
+    { name: CellName.blank, location: [4,43], id:  '1-7'},
+    { name: CellName.blank, location: [44,43], id:  '1-8'},
 ]
 export const struct15: Cell[] = [
     {name: CellName.blank, location: [8, 4],id:   '15-1'},
@@ -166,6 +237,11 @@ export const struct15: Cell[] = [
     {name: CellName.blank, location: [20, 32],id: '15-16'},
     {name: CellName.blank, location: [28, 32],id: '15-17'},
     {name: CellName.blank, location: [36, 32],id: '15-18'},
+
+
+    // 独立
+    { name: CellName.blank, location: [4,42], id:  '1-7'},
+    { name: CellName.blank, location: [44,42], id:  '1-8'},
 ]
 export const struct16: Cell[] = [
     {name: CellName.blank, location: [12, 4],id:  '16-1'},

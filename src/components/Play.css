@@ -1,0 +1,40 @@
+.play {
+    display: flex;
+}
+
+.play__record {
+    width: 400px
+}
+
+
+.play__record-count {
+    color: #f00;
+    border: 3px solid;
+    border-radius: 3px;
+    padding: 0 3px;
+    margin: 6px;
+    width: 50px;
+    display: inline-block;
+}
+
+.play__record-count1 {
+    color: cadetblue;
+}
+
+.play__record-count2 {
+    color: green;
+}
+
+.play__pass {
+    color:green;
+}
+
+.play__fail {
+    color:#f00;
+}
+
+.play__record-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+}
