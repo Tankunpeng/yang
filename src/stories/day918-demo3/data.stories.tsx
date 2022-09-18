@@ -39,10 +39,8 @@ export const layer1 = () => {
 
 export const layer2 = () => {
     const test: Cell[] = [
-        { name: CellName.blank, location: [48,4], },
-        { name: CellName.blank, location: [48,12], },    
-        { name: CellName.blank, location: [0,4], },
-{ name: CellName.blank, location: [0,12], },
+        { name: CellName.scissor, location: [0,8], },
+        { name: CellName.bell, location: [48,8], },
     ]
     return <><div style={{position: 'relative'}}>
         <WidthBackground></WidthBackground>
