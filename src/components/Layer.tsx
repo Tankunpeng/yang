@@ -41,8 +41,8 @@ export function PositionedCell({cell, isFace}: { cell: Cell, isFace: boolean }) 
 }
 
 export function LayerWrap({children}: { children: any }) {
-    return <div style={{width: '320px', height: '320px', border: '2px solid', position: 'relative',}}>
-        <div style={{position: 'absolute', left: '20px'}}>
+    return <div style={{width: '320px', height: '320px', border: '2px solid', position: 'relative',}}  className={'layer-wrap__box'}>
+        <div style={{position: 'absolute', left: '20px'}} className={'layer-wrap__content'}>
             {children}
         </div>
     </div>

@@ -9,3 +9,27 @@
 .back-cover:hover {
     display: none;
 }
+
+.layer-wrap__content > div > div:nth-child(7n + 4) > div:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #213547;
+    z-index: 1;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.layer-wrap__content > div > div:nth-child(n+22):nth-child(-n + 35) > div:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    /*top: 50%;*/
+    background: #213547;
+    z-index: 1;
+    opacity: 0.1;
+    pointer-events: none;
+}

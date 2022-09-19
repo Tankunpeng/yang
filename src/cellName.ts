@@ -1,4 +1,4 @@
-export enum CellName {
+enum YangName {
     sheep = 'sheep', // 🐑 1
     milk = 'milk', // 🥛1
     wool = 'wool', // 🧶 1
@@ -18,9 +18,29 @@ export enum CellName {
     fork = 'fork', // 🍴 1
     scissor = 'scissor', // ✂️ 1
     brush = 'brush', // 🪥 1
+}
 
+enum Blank {
     blank = 'blank' // 🈳️
 }
+
+
+export enum BlockName {
+    black = 'black',
+    blue = 'blue',
+    github = 'github',
+    white = "white",
+    yellow = 'yellow',
+    homework = 'homework',
+}
+
+export const CellName = {
+    // ...YangName,
+    ...Blank,
+    ...BlockName,
+}
+export type CellName = typeof CellName
+
 
 export type Location = [x: number, y: number]
 
